@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Coursera One</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
 
 
   </head>
-  <body>
-    <h1>My First Program</h1>
-    <p>Hello</p>
-    <a href="#">Life</a>
+  <body ng-app="NameCaluclator">
+    <h1>My First Program- Name Calculator</h1>
+
+    <div ng-controller="NameCaluclatorController">
+      Your Name : <input type="text" ng-model="name" ng-keyup="displayNumeric();">
+      Total Numeric value of person's name is:
+      {{totalvalue}}
+    </div>
+
   </body>
 </html>
